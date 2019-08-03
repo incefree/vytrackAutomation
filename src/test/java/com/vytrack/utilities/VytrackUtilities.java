@@ -1,6 +1,5 @@
 package com.vytrack.utilities;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -8,75 +7,71 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.io.File;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertTrue;
 
-public class SeleniumUtilities {
-    /**
-     *
-     * @param expectedResult
-     * @param actualResult
-     * Verifies if two strings are equals.
-     */
-    public static void verifyEquals(String expectedResult, String actualResult){
-        if(expectedResult.equals(actualResult)){
-            System.out.println("Passed");
-        }else{
-            System.out.println("Failed");
-            System.out.println("Expected result: "+expectedResult);
-            System.out.println("Actual result: "+actualResult);
-        }
-    }
+public class VytrackUtilities {
 
-    /**
-     *  This method will put on pause execution
-     * @param seconds
-     */
-    public static void waitPlease(int seconds){
+    private static String usernameLocator = "prependedInput";
+    private static String passwordLocator = "prependedInput2";
+    static String pageNameLocator = "//h1[@class='oro-subtitle']";
+    private static String loaderMaskLocator = "div[class='loader-mask shown']";
+
+    public static void waitPlease(int seconds) {
         try {
-            Thread.sleep(seconds * 1000 );
-        }catch (Exception e){
+            Thread.sleep(seconds * 1000);
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
-    /**
-     *
-     * @param page
-     * @param driver
-     * This method will open example page based on link name
-     */
-    public static void openPage(String page, WebDriver driver){
-        //we will find all examples on the home page
-        List<WebElement> listOfExamples = driver.findElements(By.tagName("a"));
-        for(WebElement example: listOfExamples){
-            if(example.getText().contains(page)){
-                example.click();
-                break;
-            }
+    public static void loginPage(WebDriver driver, String username, String password){
+
+        Driver.getDriver().findElement(By.id(usernameLocator)).sendKeys(username);
+        waitPlease(2);
+        Driver.getDriver().findElement(By.id(passwordLocator)).sendKeys(password, Keys.ENTER);
+        waitPlease(2);
+    }
+
+    public static void navigateToModule(WebDriver driver, String tab, String module){
+        String tabLocator = "//span[contains(text(),'"+tab+"') and contains(@class, 'title title-level-1')]";
+        String moduleLocator = "//span[contains(text(),'"+module+"') and contains(@class, 'title title-level-2')]";
+        Driver.getDriver().findElement(By.xpath(tabLocator)).click();
+        waitPlease(2);
+        Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
+        waitPlease(2);
+    }
+
+    public static void pageNameVerification(WebDriver driver, String expectedName){
+        String actualName = Driver.getDriver().findElement(By.xpath(pageNameLocator)).getText();
+        waitPlease(5);
+        Assert.assertEquals(expectedName, actualName);
+    }
+    public static void pageTitleVerification(WebDriver driver, String expectedTitle){
+        String actualTitle = Driver.getDriver().getTitle();
+        VytrackUtilities.waitPlease(5);
+        Assert.assertEquals(expectedTitle,actualTitle);
+    }
+
+    public static void logoutPage(WebDriver driver){
+        Driver.getDriver().findElement(By.className("fa-caret-down")).click();
+        VytrackUtilities.waitPlease(2);
+        Driver.getDriver().findElement(By.linkText("Logout")).click();
+        VytrackUtilities.waitPlease(5);
+    }
+
+    public static void waitUntilLoaderScreenDisappear(WebDriver driver) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Long.valueOf(ConfigurationReader.getProperty("explicitwait")));
+            wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(loaderMaskLocator))));
+        } catch (Exception e) {
+            System.out.println(e + " Loader mask doesn't present.");
         }
     }
-
-    public static void verifyIsDisplayed(WebElement element){
-        if(element.isDisplayed()){
-            System.out.println("PASSED");
-            System.out.println(element.getText()+": is visible");
-        }else{
-            System.out.println("FAILED");
-            System.out.println(element.getText()+": is not visible!");
-        }
-    }
-
     /**
-     * This method will recover in case of exception after unsuccessful the click,
-     * and will try to click on element again.
+     * This method will recover in case of exception during the click, and will try to click on element again.
      * @param driver
      * @param by
      * @param attempts
@@ -100,8 +95,8 @@ public class SeleniumUtilities {
                 waitPlease(1);
             }
         }
-    }
 
+    }
     /*
      * switches to new window by the exact title
      */
@@ -395,29 +390,4 @@ public class SeleniumUtilities {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command);
     }
-    /**
-     * This method will take a screenshot
-     * @param name
-     * @return
-     */
-
-    public static String getScreenshot(String name)  {
-        // name the screenshot with the current date time to avoid duplicate name
-        String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_hh:mm:ss a"));
-        // TakesScreenshot ---> interface from selenium which takes screenshots
-        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        // full path to the screenshot location
-        String target = System.getProperty("user.dir") + "/test-output/Screenshots/" + name + date + ".png";
-        File finalDestination = new File(target);
-        // save the screenshot to the path given
-        try {
-            FileUtils.copyFile(source, finalDestination);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return target;
-    }
-
-
 }
