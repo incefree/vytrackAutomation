@@ -1,4 +1,4 @@
-package com.vytrack.pages;
+package com.vytrack.pages.activities;
 
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.WebDriver;

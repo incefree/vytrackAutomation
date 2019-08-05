@@ -390,4 +390,39 @@ public class VytrackUtilities {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command);
     }
+
+    /**
+     * Waits until loader screen present. If loader screen will not pop up at all,
+     * NoSuchElementException will be handled  bu try/catch block
+     * Thus, we can continue in any case.
+     *
+     */
+    public static void waitUntilLoaderScreenDisappear() {
+        try {
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Long.valueOf(ConfigurationReader.getProperty("explicitwait")));
+            wait.until(ExpectedConditions.invisibilityOf(Driver.getDriver().findElement(By.cssSelector(loaderMaskLocator))));
+        }catch (Exception e){
+            System.out.println(e+" :: Loader mask doesn't present.");
+        }
+    }
+
+    /**
+     * This method will navigate user to the specific module in vytrack application.
+     * For example: if tab is equals to Activities, and module equals to Calls,
+     * Then method will navigate user to this page: http://qa2.vytrack.com/call/
+     *
+     * @param tab
+     * @param module
+     */
+    public static void navigateToModule(String tab, String module){
+        String tabLocator = "//span[contains(text(),'"+tab+"') and contains(@class, 'title title-level-1')]";
+        String moduleLocator = "//span[contains(text(),'"+module+"') and contains(@class, 'title title-level-2')]";
+        SeleniumUtilities.clickWithWait(Driver.getDriver(), By.xpath(tabLocator), 5);
+        Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
+
+//        SeleniumUtils.clickWithWait(driver, By.xpath(moduleLocator), 5);
+
+//        SeleniumUtils.waitPlease(2);
+    }
+
 }

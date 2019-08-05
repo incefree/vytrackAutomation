@@ -1,4 +1,4 @@
-package com.vytrack.pages;
+package com.vytrack.pages.calendar;
 
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.By;
@@ -14,7 +14,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
 
-public class CalendarEventsPage1 {
+public class CalendarEventsPage3 {
 
     public String createCalendarEvenLocator = "a[title^='Create Calendar']";
     public String startDateLocator = "input[class='input-small datepicker-input start hasDatepicker']";

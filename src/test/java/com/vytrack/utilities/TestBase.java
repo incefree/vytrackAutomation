@@ -37,7 +37,7 @@ public class TestBase {
         report.attachReporter(htmlReporter);
 
         // we can add system information to report
-        report.setSystemInfo("OS",System.getProperty("os.name"));
+        report.setSystemInfo("II",System.getProperty("ii.name"));
 
 
         htmlReporter.config().setDocumentTitle("VYTrack Test Automation");

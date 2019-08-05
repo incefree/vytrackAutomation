@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55aed520-d9b3-4c11-9517-14768a6273d0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/ActivitiesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/CalendarEventsPage1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/activities/CalendarEventsTest3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/activities/DateAndTimeTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/BrowserUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/ConfigurationReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VytrackUtilities.java" afterDir="false" />
+    <list default="true" id="55aed520-d9b3-4c11-9517-14768a6273d0" name="Default Changelist" comment="08.04.2019 Vytrack Updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation/LoginTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation/PageAccessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation/PageAccessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/SeleniumUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/SeleniumUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VYTrackUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VYTrackUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/components/login_navigation/LoginTest_ost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/components/login_navigation/LoginTests2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/components/login_navigation/PageAccessTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/components/login_navigation/PageAccessTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/SmokeTest_01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/SmokeTest_01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/SmokeTest_02.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/tests/smoke_tests/SmokeTest_02.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/BrowserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/BrowserFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/SeleniumUtilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/SeleniumUtilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/VYTrackUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/vytrack/utilities/VYTrackUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/ActivitiesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/activities/ActivitiesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/CalendarEventsPage1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/pages/calendar/CalendarEventsPage3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/activities/CalendarEventsTest3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/calendar/CalendarEventsTest3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/activities/DateAndTimeTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/ConfigurationReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/ConfigurationReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VYTrackUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VytrackUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/utilities/VytrackUtilities.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,18 +59,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CalenderEventsTests.verifyTitleColumn">
-    <configuration name="CalendarEventsTest3.dateTimeEndTimeAutoAdjustTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CalendarEventsTest1.verifyTitleColumn">
+    <configuration name="CalendarEventsTest1.verifyTitleColumn" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="vytrackAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vytrack.tests.components.activities.*" />
+          <option name="PATTERN" value="com.vytrack.tests.components.calendar.CalendarEventsTest1" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.vytrack.tests.components.activities" />
-      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.activities.CalendarEventsTest3" />
-      <option name="METHOD_NAME" value="dateTimeEndTimeAutoAdjustTest" />
+      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.calendar.CalendarEventsTest1" />
+      <option name="METHOD_NAME" value="verifyTitleColumn" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -93,17 +78,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalenderEventsTests.verifyTitleColumn" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CalendarEventsTest3.dateTimeEndTimeAutoAdjustTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="vytrackAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vytrack.tests.components.activities.*" />
+          <option name="PATTERN" value="com.vytrack.tests.components.calendar.CalendarEventsTest1" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.vytrack.tests.components.activities" />
-      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.activities.CalenderEventsTests" />
-      <option name="METHOD_NAME" value="verifyTitleColumn" />
+      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.calendar.CalendarEventsTest3" />
+      <option name="METHOD_NAME" value="dateTimeEndTimeAutoAdjustTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -115,12 +100,12 @@
       <module name="vytrackAutomation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vytrack.tests.components.activities.*" />
+          <option name="PATTERN" value="com.vytrack.tests.components.calendar.CalendarEventsTest1" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.vytrack.tests.components.activities" />
-      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.activities.DateAndTimeTests" />
+      <option name="MAIN_CLASS_NAME" value="com.vytrack.tests.components.calendar.DateAndTimeTests" />
       <option name="METHOD_NAME" value="verifyDateAndTime" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -167,7 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CalenderEventsTests.verifyTitleColumn" />
+        <item itemvalue="TestNG.CalendarEventsTest1.verifyTitleColumn" />
         <item itemvalue="TestNG.LoginTests.negativeLoginTest1" />
         <item itemvalue="TestNG.LoginTests.loginTest1" />
         <item itemvalue="TestNG.DateAndTimeTests.verifyDateAndTime" />
@@ -186,6 +171,14 @@
       <option name="presentableId" value="Default" />
       <updated>1562865372579</updated>
     </task>
+    <task id="LOCAL-00001" summary="08.03.2019 Vytrack Updated">
+      <created>1564872695820</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564872695820</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -232,6 +225,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="08.03.2019 Vytrack Updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="08.03.2019 Vytrack Updated" />
   </component>
   <component name="masterDetails">
     <states>

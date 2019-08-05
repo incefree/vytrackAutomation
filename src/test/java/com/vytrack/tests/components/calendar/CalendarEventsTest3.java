@@ -1,6 +1,6 @@
-package com.vytrack.tests.components.activities;
+package com.vytrack.tests.components.calendar;
 
-import com.vytrack.pages.CalendarEventsPage1;
+import com.vytrack.pages.calendar.CalendarEventsPage3;
 import com.vytrack.pages.dashboards.DashboardPage;
 import com.vytrack.pages.login_navigation.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
@@ -20,7 +20,7 @@ import java.time.temporal.ChronoUnit;
 
 public class CalendarEventsTest3 extends TestBase {
 
-    CalendarEventsPage1 calendarEventsPage= new CalendarEventsPage1();
+    CalendarEventsPage3 calendarEventsPage= new CalendarEventsPage3();
 
     LoginPage loginPage =new LoginPage();
 
