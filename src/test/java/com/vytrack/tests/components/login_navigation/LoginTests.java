@@ -2,14 +2,13 @@ package com.vytrack.tests.components.login_navigation;
 
 import com.vytrack.pages.login_navigation.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
-import com.vytrack.utilities.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTests extends TestBase {
-
+public class LoginTests {
     @Test
     public void loginTest1(){
+
         // that is required, otherwise you will get null pointer exception
         extentLogger = report.createTest("Login as a store manager");
         //we are instantiating page class inside a tests class,
@@ -40,5 +39,7 @@ public class LoginTests extends TestBase {
         extentLogger.pass("Verified that warning message displayed: Invalid user name or password");
     }
 
+
+}
 
 }

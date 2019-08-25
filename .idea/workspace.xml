@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55aed520-d9b3-4c11-9517-14768a6273d0" name="Default Changelist" comment="08.04.2019 Vytrack Updated" />
+    <list default="true" id="55aed520-d9b3-4c11-9517-14768a6273d0" name="Default Changelist" comment="08.04.2019 Vytrack Updated">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation/LoginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation/LoginTests.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +39,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/com/vytrack/tests/components/login_navigation" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
