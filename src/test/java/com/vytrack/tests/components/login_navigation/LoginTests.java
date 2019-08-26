@@ -2,12 +2,15 @@ package com.vytrack.tests.components.login_navigation;
 
 import com.vytrack.pages.login_navigation.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
+import com.vytrack.utilities.TestBase;
+import com.vytrack.utilities.VYTrackUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTests {
+
+public class LoginTests extends TestBase {
     @Test
-    public void loginTest1(){
+    public void loginTest1() {
 
         // that is required, otherwise you will get null pointer exception
         extentLogger = report.createTest("Login as a store manager");
@@ -29,7 +32,7 @@ public class LoginTests {
     }
 
     @Test
-    public void negativeLoginTest1(){
+    public void negativeLoginTest1() {
         extentLogger = report.createTest("Login with invalid credentials");
 
         LoginPage loginPage = new LoginPage();
@@ -42,4 +45,4 @@ public class LoginTests {
 
 }
 
-}
+

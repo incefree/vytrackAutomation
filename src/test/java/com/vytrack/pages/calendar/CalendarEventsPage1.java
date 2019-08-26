@@ -1,8 +1,8 @@
 package com.vytrack.pages.calendar;
 
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.SeleniumUtilities;
-import com.vytrack.utilities.VytrackUtilities;
+import com.vytrack.utilities.SeleniumUtils;
+import com.vytrack.utilities.VYTrackUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -99,7 +99,7 @@ public class CalendarEventsPage1 {
      * @param startOrEnd which date to click on start or end
      */
     public void selectStartOrEndDate(String date, String startOrEnd) {
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         LocalDate ld = LocalDate.of(Integer.parseInt(date.substring(date.lastIndexOf("/") + 1)),
                 Integer.parseInt(date.substring(0, date.indexOf("/"))),
                 Integer.parseInt(date.substring(date.indexOf("/") + 1, date.lastIndexOf("/"))));
@@ -114,10 +114,10 @@ public class CalendarEventsPage1 {
 
         //click on start or end date
         if (startOrEnd.equalsIgnoreCase("start")) {
-            SeleniumUtilities.waitForVisibility(startDate, 5);
+            SeleniumUtils.waitForVisibility(startDate, 5);
             startDate.click();
         } else {
-            SeleniumUtilities.waitForVisibility(endDate, 5);
+            SeleniumUtils.waitForVisibility(endDate, 5);
             endDate.click();
         }
 
@@ -135,7 +135,7 @@ public class CalendarEventsPage1 {
     public void selectTomorrowDay() {
         int day = LocalDate.now().plusDays(1).getDayOfMonth();
         int month = LocalDate.now().plusDays(1).getMonth().getValue();
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         startDate.click();
         Select monthSelect = new Select(monthDropdown);
         monthSelect.selectByIndex(month - 1);
@@ -147,7 +147,7 @@ public class CalendarEventsPage1 {
     public void selectADay(int plusDays) {
         int day = LocalDate.now().plusDays(plusDays).getDayOfMonth();
         int month = LocalDate.now().plusDays(plusDays).getMonth().getValue();
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         startDate.click();
         Select monthSelect = new Select(monthDropdown);
         monthSelect.selectByIndex(month - 1);
@@ -173,7 +173,7 @@ public class CalendarEventsPage1 {
 
     public void selectStartTime(int plusHours) {
         String time = LocalDateTime.now().plusHours(plusHours).format(DateTimeFormatter.ofPattern("h:00 a"));
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         String startTimeToSelect = "(//li[text()='" + time + "'])[1]";
         startTime.click();
         new WebDriverWait(Driver.getDriver(), 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(startTimeToSelect)));
@@ -181,7 +181,7 @@ public class CalendarEventsPage1 {
     }
 
     public void selectStartTime(String time) {
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         String startTimeToSelect = "(//li[text()='" + time + "'])[1]";
         startTime.click();
         new WebDriverWait(Driver.getDriver(), 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath(startTimeToSelect)));
@@ -189,7 +189,7 @@ public class CalendarEventsPage1 {
     }
 
     public void selectEndTime(String time) {
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         String endTimeToSelect = "(//li[text()='" + time + "'])[2]";
         startTime.click();
         Driver.getDriver().findElement(By.xpath(endTimeToSelect)).click();
@@ -207,7 +207,7 @@ public class CalendarEventsPage1 {
     }
 
     public void clickOnCreateCalendarEvent() {
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         createCalendarEventBtn.click();
     }
 

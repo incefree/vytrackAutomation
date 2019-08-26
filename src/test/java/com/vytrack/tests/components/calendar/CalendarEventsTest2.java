@@ -19,13 +19,13 @@ public class CalendarEventsTest2 extends TestBase {
         loginPage.login(username, password);
 
         //go to Calendar Events page
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
 
         //deselect title option from grid settings
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         calendarPage.selectGridSetting("Title", false);
-        SeleniumUtilities.waitPlease(3);
+        SeleniumUtils.waitPlease(3);
 
         //Verify that title column name is not visible any more
         Assert.assertFalse(calendarPage.verifyHeaderExists("Title"), "Title column name still visible.");

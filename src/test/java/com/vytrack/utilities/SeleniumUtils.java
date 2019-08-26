@@ -1,12 +1,14 @@
 package com.vytrack.utilities;
 
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -15,9 +17,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import static org.testng.AssertJUnit.assertTrue;
 
-public class SeleniumUtilities {
+
+public class SeleniumUtils {
     /**
      *
      * @param expectedResult
@@ -395,12 +399,12 @@ public class SeleniumUtilities {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript(command);
     }
+
     /**
      * This method will take a screenshot
      * @param name
      * @return
      */
-
     public static String getScreenshot(String name)  {
         // name the screenshot with the current date time to avoid duplicate name
         String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_hh:mm:ss a"));
@@ -418,6 +422,5 @@ public class SeleniumUtilities {
         }
         return target;
     }
-
 
 }

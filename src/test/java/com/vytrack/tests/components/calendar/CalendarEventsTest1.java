@@ -4,7 +4,7 @@ import com.vytrack.pages.calendar.CalendarEventsPage1;
 import com.vytrack.pages.login_navigation.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.TestBase;
-import com.vytrack.utilities.VytrackUtilities;
+import com.vytrack.utilities.VYTrackUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,10 +19,10 @@ public class CalendarEventsTest1 extends TestBase {
         //login
         loginPage.login(username, password);
         //go to Calendar Events page
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
         //deselect title option from grid settings
-        VytrackUtilities.waitUntilLoaderScreenDisappear();
+        VYTrackUtils.waitUntilLoaderScreenDisappear();
         calendarPage.selectGridSetting("Title", false);
         // BrowserUtils.waitPlease(3);
         //Verify that title column name is not visible any more
@@ -44,7 +44,7 @@ public class CalendarEventsTest1 extends TestBase {
         //login
         loginPage.login(username, password);
         //go to Calendar Events page
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
         calendarPage.clickOnCreateCalendarEvent();
         calendarPage.selectStartOrEndDate("8/15/2019", "start");
         //    verify start date is the same as end date
@@ -60,7 +60,7 @@ public class CalendarEventsTest1 extends TestBase {
         //login
         loginPage.login(username, password);
         //go to Calendar Events page
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
         //click to create calendar event
         calendarPage.clickOnCreateCalendarEvent();
         //select tomorrow date
@@ -81,7 +81,7 @@ public class CalendarEventsTest1 extends TestBase {
         //login
         loginPage.login(username, password);
         //go to Calendar Events page
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
         //click to create calendar event
         calendarPage.clickOnCreateCalendarEvent();
         //select any time
@@ -99,7 +99,7 @@ public class CalendarEventsTest1 extends TestBase {
         //login
         loginPage.login(username, password);
         //go to Calendar Events page
-        VytrackUtilities.navigateToModule("Activities", "Calendar Events");
+        VYTrackUtils.navigateToModule("Activities", "Calendar Events");
         //click to create calendar event
         calendarPage.clickOnCreateCalendarEvent();
         //select 11:30 PM

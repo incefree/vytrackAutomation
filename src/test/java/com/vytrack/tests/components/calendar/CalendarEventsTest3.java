@@ -3,10 +3,7 @@ package com.vytrack.tests.components.calendar;
 import com.vytrack.pages.calendar.CalendarEventsPage3;
 import com.vytrack.pages.dashboards.DashboardPage;
 import com.vytrack.pages.login_navigation.LoginPage;
-import com.vytrack.utilities.ConfigurationReader;
-import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.TestBase;
-import com.vytrack.utilities.VytrackUtilities;
+import com.vytrack.utilities.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -48,7 +45,7 @@ public class CalendarEventsTest3 extends TestBase {
 
         //2.Go to Activities->CalendarEvents
         dashboardPage.navigateToModule(driver, "Activities", "Calendar Events");
-        VytrackUtilities.waitUntilLoaderScreenDisappear(Driver.getDriver());
+        VYTrackUtils.waitUntilLoaderScreenDisappear(Driver.getDriver());
 
         //3.Click on create new calendar event
         Driver.getDriver().findElement(By.cssSelector(calendarEventsPage.createCalendarEvenLocator)).click();

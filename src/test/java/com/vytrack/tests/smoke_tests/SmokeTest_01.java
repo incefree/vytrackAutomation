@@ -1,6 +1,6 @@
 package com.vytrack.tests.smoke_tests;
 
-import com.vytrack.utilities.SeleniumUtilities;
+import com.vytrack.utilities.SeleniumUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +29,7 @@ public class SmokeTest_01 {
         driver.findElement(By.id("prependedInput")).sendKeys("user183");
         driver.findElement(By.id("prependedInput2")).sendKeys("UserUser123");
         driver.findElement(By.id("_submit")).click();
-        SeleniumUtilities.waitPlease(3);
+        SeleniumUtils.waitPlease(3);
 
     }
 
@@ -41,7 +41,7 @@ public class SmokeTest_01 {
     public void fleetVehicles() {
         driver.findElement(By.xpath("(//span[@class='title title-level-1'])[1]")).click();
         driver.findElement(By.xpath("(//span[@class='title title-level-2'])[1]")).click();
-        SeleniumUtilities.waitPlease(4);
+        SeleniumUtils.waitPlease(4);
         Assert.assertEquals(driver.getTitle(), "Car - Entities - System - Car - Entities - System");
         Assert.assertEquals(driver.findElement(By.cssSelector("h1[class='oro-subtitle']")).getText(), "Cars");
 
@@ -55,7 +55,7 @@ public class SmokeTest_01 {
     public void customersAccounts() {
         driver.findElement(By.xpath("(//*[@class='title title-level-1'])[2]")).click();
         driver.findElement(By.xpath("(//span[@class='title title-level-2'])[8]")).click();
-        SeleniumUtilities.waitPlease(3);
+        SeleniumUtils.waitPlease(3);
         Assert.assertEquals(driver.getTitle(), "Accounts - Customers");
         Assert.assertEquals(driver.findElement(By.cssSelector("h1[class='oro-subtitle']")).getText(), "Accounts");
 
@@ -68,7 +68,7 @@ public class SmokeTest_01 {
     public void customersContacts() {
         driver.findElement(By.xpath("(//span[@class='title title-level-1'])[2]")).click();
         driver.findElement(By.xpath("(//span[@class='title title-level-2'])[9]")).click();
-        SeleniumUtilities.waitPlease(3);
+        SeleniumUtils.waitPlease(3);
         Assert.assertEquals(driver.getTitle(), "Contacts - Customers");
         Assert.assertEquals(driver.findElement(By.cssSelector("h1[class='oro-subtitle']")).getText(),"Contacts");
 
@@ -82,7 +82,7 @@ public class SmokeTest_01 {
     public void activitiesCalendarEvents() {
         driver.findElement(By.xpath("(//span[@class='title title-level-1'])[3]")).click();
         driver.findElement(By.xpath("(//span[@class='title title-level-2'])[10]")).click();
-        SeleniumUtilities.waitPlease(3);
+        SeleniumUtils.waitPlease(3);
         Assert.assertEquals(driver.getTitle(),"Calendar Events - Activities");
         Assert.assertEquals(driver.findElement(By.cssSelector("h1[class='oro-subtitle']")).getText(),"Calendar Events");
 
@@ -93,7 +93,7 @@ public class SmokeTest_01 {
     public void close(){
         driver.findElement(By.xpath("(//a[@class='dropdown-toggle'])[1]")).click();
         driver.findElement(By.xpath("//a[@class='no-hash']")).click();
-        SeleniumUtilities.waitPlease(2);
+        SeleniumUtils.waitPlease(2);
         driver.close();
     }
 }

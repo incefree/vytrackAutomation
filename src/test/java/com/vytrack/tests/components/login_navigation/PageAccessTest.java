@@ -1,8 +1,6 @@
 package com.vytrack.tests.components.login_navigation;
 
-import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.TestBase;
-import com.vytrack.utilities.VytrackUtilities;
+import com.vytrack.utilities.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -16,7 +14,7 @@ public class PageAccessTest extends TestBase {
     public void storeManagerAccessTest() {
         VytrackUtilities.loginPage(driver, "storemanager57", "UserUser123");
         VytrackUtilities.waitPlease(3);
-        VytrackUtilities.navigateToModule(driver, "Fleet", "Vehicle Contracts");
+        VYTrackUtils.navigateToModule(driver, "Fleet", "Vehicle Contracts");
         VytrackUtilities.waitPlease(3);
         VytrackUtilities.pageNameVerification(driver, "All Vehicle Contract");
     }
@@ -34,7 +32,7 @@ public class PageAccessTest extends TestBase {
     public void truckDriverAccessTest(){
         VytrackUtilities.loginPage(driver, "user10", "UserUser123");
         VytrackUtilities.waitPlease(3);
-        VytrackUtilities.navigateToModule(driver, "Fleet", "Vehicle Contracts");
+        VYTrackUtils.navigateToModule(driver, "Fleet", "Vehicle Contracts");
         VytrackUtilities.waitPlease(3);
         String errorMessage = Driver.getDriver().findElement(By.xpath(errorMessageLocator)).getText();
         if(errorMessage.equals("You do not have permission to perform this action.")){

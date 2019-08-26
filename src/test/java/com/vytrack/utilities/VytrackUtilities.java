@@ -13,7 +13,6 @@ import java.util.List;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class VytrackUtilities {
-
     private static String usernameLocator = "prependedInput";
     private static String passwordLocator = "prependedInput2";
     static String pageNameLocator = "//h1[@class='oro-subtitle']";
@@ -417,7 +416,7 @@ public class VytrackUtilities {
     public static void navigateToModule(String tab, String module){
         String tabLocator = "//span[contains(text(),'"+tab+"') and contains(@class, 'title title-level-1')]";
         String moduleLocator = "//span[contains(text(),'"+module+"') and contains(@class, 'title title-level-2')]";
-        SeleniumUtilities.clickWithWait(Driver.getDriver(), By.xpath(tabLocator), 5);
+        SeleniumUtils.clickWithWait(Driver.getDriver(), By.xpath(tabLocator), 5);
         Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
 
 //        SeleniumUtils.clickWithWait(driver, By.xpath(moduleLocator), 5);
@@ -426,3 +425,4 @@ public class VytrackUtilities {
     }
 
 }
+
